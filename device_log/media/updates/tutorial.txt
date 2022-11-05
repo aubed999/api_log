@@ -1,0 +1,134 @@
+1-creat a virtual env:          #ls in command line is for going in a folder
+
+installing:
+pip install virtualenv
+
+creating a venv:
+virtualenv file_name
+
+to activate env:
+project_lock_venv\Scripts\activate
+or deactivate
+///////////////////////////////////
+2-installing packages:
+pip install django-rest-framework #for api
+
+pip install django-cors-headers #for securty
+
+pip install djoser #for auth
+
+pip install pillow #for image
+
+pip install stripe
+
+///////////////////////////
+3-creating a project:
+django-admin startproject project_name
+python manage.py startapp projectApp
+and to runserver:
+py manage.py runserver
+///////////////////////////
+4-in projcet setting file add installed packages:
+installd_app:
+'rest_framework',
+'rest_framework.authtoken',
+'corsheaders',
+'djoser', 
+
+//////////////////////////
+if using a live server add addres in settings:
+CORS_AALOWED_ORIGINS=[
+	"http://localhost:8080"
+]
+
+///////////////////////////
+5-in MIDDLEWARE befor commonmiddlware:
+'corsheaders.middleware.CorsMiddleware',
+///////////////////////////
+6-add paths in url file:
+path('api/v1/', include('djoser.urls')),
+path('api/v1/', include('djoser.urls.authtoken')),
+/////////////////////////////
+7-inintialising file:
+py manage.py makemigrations
+and
+py manage.py migrate
+//////////////////////////////
+8-creating admin :
+py manage.py createsuperuser
+//////////////////////////////
+9-setting up vue:
+npm install -g @vue/cli
+vue create filename
+/////////////////////////////
+react:
+
+
+
+npx create-react-app my-app
+///////////
+10-setting up vue:
+https://www.youtube.com/watch?v=Yg5zkd9nm6w  #at 12:30 
+1-choose babel
+2-router
+3-vuex
+4-css pre-
+5-remove linter
+///////////////////////////////
+11- installing vue packags
+in filename
+npm install axios
+npm install bulma
+npm install bulma-toast
+///////////////////////////////
+12-npm run serve
+///////////////////////////////
+13-include font awsome
+///////////////////////////////
+14-add thes commands to app.vue 
+@import '../node_modules/buma';#to style
+and
+  <div id="wrapper">#to template
+  <router-view/>
+  </div>
+
+////////////////////////////
+connectong mysql to django
+https://medium.com/@omaraamir19966/connect-django-with-mysql-database-f946d0f6f9e3
+
+/////////////////////////////////////////////////////////////////
+error webpack:
+https://stackoverflow.com/questions/64557638/how-to-polyfill-node-core-modules-in-webpack-5
+//////////////////////////////////////////
+django log file:
+https://mattsegal.dev/file-logging-django.html
+
+////////////////////////////////////////////
+https://scanskill.com/frontend/react/nested-route-dynamic-route-react-router-v6/
+
+dynamic routes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
